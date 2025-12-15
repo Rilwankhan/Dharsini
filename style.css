@@ -333,56 +333,48 @@ html {
     margin-top: 20px;
 }
 
-.floating-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.floating-icon {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: var(--bg-card);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: var(--shadow);
-    animation: orbit 8s linear infinite;
+.scroll-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.floating-icon:nth-child(1) {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #e34f26;
-    animation-delay: 0s;
+.scroll-animate[data-animation="fadeInLeft"] {
+    transform: translateX(-50px);
 }
 
-.floating-icon:nth-child(2) {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    color: #1572b6;
-    animation-delay: -2s;
+.scroll-animate[data-animation="fadeInLeft"].animate {
+    transform: translateX(0);
 }
 
-.floating-icon:nth-child(3) {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #f7df1e;
-    animation-delay: -4s;
+.scroll-animate[data-animation="fadeInRight"] {
+    transform: translateX(50px);
 }
 
-.floating-icon:nth-child(4) {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    color: #3776ab;
-    animation-delay: -6s;
+.scroll-animate[data-animation="fadeInRight"].animate {
+    transform: translateX(0);
+}
+
+.scroll-animate[data-animation="zoomIn"] {
+    transform: scale(0.8);
+}
+
+.scroll-animate[data-animation="zoomIn"].animate {
+    transform: scale(1);
+}
+
+.scroll-animate[data-animation="fadeInUp"] {
+    transform: translateY(50px);
+}
+
+.scroll-animate[data-animation="fadeInUp"].animate {
+    transform: translateY(0);
 }
 
 /* Sections */
