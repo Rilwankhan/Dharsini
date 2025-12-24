@@ -89,7 +89,7 @@ function openCertificate(certType) {
             title: 'Java Programming Certificate'
         },
         'hackathon': {
-            image: 'UI.jpg',
+            image: 'DHARSHINI WD.jpg',
             title: 'Jet Hackathon Runner Up'
         }
     };
